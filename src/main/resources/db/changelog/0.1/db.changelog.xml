@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="a.zakirov" id="0.1-0" runOnChange="false" failOnError="false">
+        <sql>
+            CREATE TABLE SCOREBOARD_CODE (
+                id BIGINT PRIMARY KEY,
+                value VARCHAR(255) NOT NULL
+            );
+        </sql>
+    </changeSet>
+    <changeSet author="a.zakirov" id="0.1-1" runOnChange="false" failOnError="true">
+        <sql>
+            INSERT INTO SCOREBOARD_CODE(id, value ) VALUES (-1, 'a0a0');
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
